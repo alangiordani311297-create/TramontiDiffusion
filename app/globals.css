@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  /* Luxury Light Palette */
+  --velluto-black: #0a0a0a;
+  --velluto-dark: #121212;
+  --velluto-gold: #d4af37;
+  --velluto-gold-light: #f3e5ab;
+  --velluto-gray: #2a2a2a;
+  --velluto-white: #ffffff;
+  --velluto-light: #f5f5f5;
+
+  --background: var(--velluto-white);
+  --foreground: var(--velluto-dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-velluto-black: var(--velluto-black);
+  --color-velluto-dark: var(--velluto-dark);
+  --color-velluto-gold: var(--velluto-gold);
+  --color-velluto-gold-light: var(--velluto-gold-light);
+  --color-velluto-gray: var(--velluto-gray);
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: var(--font-outfit), "Helvetica Neue", Arial, sans-serif;
+
+  --animate-infinite-scroll: infinite-scroll 40s linear infinite;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--velluto-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--velluto-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--velluto-gold);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utilities for selection */
+::selection {
+  background-color: var(--velluto-gold);
+  color: black;
+}
