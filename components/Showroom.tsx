@@ -31,7 +31,7 @@ const Showroom: React.FC<ShowroomProps> = ({ onOpenGallery, onOpenQuote }) => {
                             – Horacio Pagani
                         </p>
                     </div>
-                    <h2 className="text-3xl md:text-5xl text-foreground font-light mb-8">LA NOSTRA COLLEZIONE ESCLUSIVA</h2>
+                    <h2 className="text-3xl md:text-5xl text-foreground font-light mb-8 uppercase">TROVA L&apos;AUTO DEI TUOI SOGNI</h2>
                     <div className="w-24 h-[1px] bg-velluto-gold mx-auto opacity-50 mb-12"></div>
                 </div>
 
@@ -39,33 +39,69 @@ const Showroom: React.FC<ShowroomProps> = ({ onOpenGallery, onOpenQuote }) => {
                 <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-6 md:p-8 mb-20 border border-gray-100">
                     <div className="flex flex-col gap-4">
                         {/* Riga 1 */}
-                        <input 
-                            type="text" 
-                            placeholder="Nuovo, usato o km0..." 
-                            className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] focus:border-transparent transition-all placeholder:text-gray-600"
-                        />
+                        <div className="relative">
+                            <select 
+                                defaultValue=""
+                                className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] transition-all appearance-none cursor-pointer"
+                            >
+                                <option value="" disabled>Nuovo, usato o km0...</option>
+                                <option value="nuovo">Nuovo</option>
+                                <option value="usato">Usato</option>
+                                <option value="km0">Km 0</option>
+                            </select>
+                            <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                            </div>
+                        </div>
                         
                         {/* Riga 2 */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input 
-                                type="text" 
-                                placeholder="Marca..." 
-                                className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] transition-all placeholder:text-gray-600"
-                            />
-                            <input 
-                                type="text" 
-                                placeholder="Modello..." 
-                                className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] transition-all placeholder:text-gray-600"
-                            />
+                            <div className="relative">
+                                <select 
+                                    defaultValue=""
+                                    className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] transition-all appearance-none cursor-pointer"
+                                >
+                                    <option value="" disabled>Marca...</option>
+                                    <option value="audi">Audi</option>
+                                    <option value="ferrari">Ferrari</option>
+                                    <option value="lamborghini">Lamborghini</option>
+                                    <option value="porsche">Porsche</option>
+                                </select>
+                                <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <select 
+                                    defaultValue=""
+                                    className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] transition-all appearance-none cursor-pointer"
+                                >
+                                    <option value="" disabled>Modello...</option>
+                                    <option value="tutti">Tutti i modelli</option>
+                                </select>
+                                <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                                </div>
+                            </div>
                         </div>
                         
                         {/* Riga 3 */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input 
-                                type="text" 
-                                placeholder="Alimentazione..." 
-                                className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] transition-all placeholder:text-gray-600"
-                            />
+                            <div className="relative">
+                                <select 
+                                    defaultValue=""
+                                    className="w-full px-5 py-4 rounded-xl border border-gray-200 text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#3B4DFA] transition-all appearance-none cursor-pointer"
+                                >
+                                    <option value="" disabled>Alimentazione...</option>
+                                    <option value="benzina">Benzina</option>
+                                    <option value="diesel">Diesel</option>
+                                    <option value="elettrica">Elettrica</option>
+                                    <option value="ibrida">Ibrida</option>
+                                </select>
+                                <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                                </div>
+                            </div>
                             <div className="flex items-center px-5 py-4 rounded-xl border border-gray-200 bg-white">
                                 <label className="flex items-center cursor-pointer gap-3 w-full">
                                     <input 

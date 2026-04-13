@@ -1,20 +1,27 @@
 import React from 'react';
 
 const BRANDS = [
-    { name: 'Ferrari', logo: 'https://cdn.simpleicons.org/ferrari/white', isSimpleIcon: true },
-    { name: 'Lamborghini', logo: 'https://cdn.simpleicons.org/lamborghini/white', isSimpleIcon: true },
-    { name: 'Aston Martin', logo: 'https://cdn.simpleicons.org/astonmartin/white', isSimpleIcon: true },
-    { name: 'Porsche', logo: 'https://cdn.simpleicons.org/porsche/white', isSimpleIcon: true },
-    { name: 'McLaren', logo: 'https://cdn.simpleicons.org/mclaren/white', isSimpleIcon: true },
-    { name: 'Audi', logo: 'https://cdn.simpleicons.org/audi/white', isSimpleIcon: true },
-    { name: 'Rolls Royce', logo: 'https://cdn.simpleicons.org/rollsroyce/white', isSimpleIcon: true },
-    // Poiché si tratta di un'immagine JPG con sfondo bianco e logo nero, non dobbiamo usare "invert"
-    // altrimenti lo sfondo diventerà nero e il logo bianco.
-    // Usiamo mix-blend-multiply per far "scomparire" lo sfondo bianco rendendolo trasparente.
-    { name: 'Mercedes Benz', logo: '/immagini/Mercedes_Benz_Logo_11.jpg', isSimpleIcon: false, isJpg: true },
-    { name: 'Bentley', logo: 'https://cdn.simpleicons.org/bentley/white', isSimpleIcon: true },
-    { name: 'Maserati', logo: 'https://cdn.simpleicons.org/maserati/white', isSimpleIcon: true },
-    { name: 'BMW', logo: 'https://cdn.simpleicons.org/bmw/white', isSimpleIcon: true },
+    { name: 'Ferrari', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Ferrari-Logo.svg/200px-Ferrari-Logo.svg.png' },
+    { name: 'Lamborghini', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/200px-Lamborghini_Logo.svg.png' },
+    { name: 'Porsche', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Porsche_logo.svg/200px-Porsche_logo.svg.png' },
+    { name: 'Maserati', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Maserati_logo.svg/200px-Maserati_logo.svg.png' },
+    { name: 'Aston Martin', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Aston_Martin_logo.svg/200px-Aston_Martin_logo.svg.png' },
+    { name: 'McLaren', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/66/McLaren_Group_logo.svg/200px-McLaren_Group_logo.svg.png' },
+    { name: 'Mercedes Benz', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Benz_logo.svg/200px-Mercedes-Benz_logo.svg.png' },
+    { name: 'Bugatti', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bugatti_logo.svg/200px-Bugatti_logo.svg.png' },
+    { name: 'Pagani', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Pagani_Automobili_logo.svg/200px-Pagani_Automobili_logo.svg.png' },
+    { name: 'Koenigsegg', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Koenigsegg_logo.svg/200px-Koenigsegg_logo.svg.png' },
+    { name: 'Bentley', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Bentley_logo.svg/200px-Bentley_logo.svg.png' },
+    { name: 'Rolls Royce', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Rolls-Royce_Motor_Cars_logo.svg/200px-Rolls-Royce_Motor_Cars_logo.svg.png' },
+    { name: 'Audi', logo: '/immagini/logo audi.jpg', scale: 'scale-150' },
+    { name: 'BMW', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/200px-BMW.svg.png' },
+    { name: 'Land Rover', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Land_Rover_logo_2.svg/200px-Land_Rover_logo_2.svg.png' },
+    { name: 'Jaguar', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Jaguar_logo.svg/200px-Jaguar_logo.svg.png' },
+    { name: 'Mini', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mini_logo.svg/200px-Mini_logo.svg.png' },
+    { name: 'Smart', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Smart_logo.svg/200px-Smart_logo.svg.png' },
+    { name: 'VW', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/200px-Volkswagen_logo_2019.svg.png' },
+    { name: 'Abarth', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Abarth_Logo.svg/200px-Abarth_Logo.svg.png' },
+    { name: 'Jeep', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Jeep_logo.svg/200px-Jeep_logo.svg.png' },
 ];
 
 const BrandCarousel: React.FC = () => {
@@ -23,7 +30,7 @@ const BrandCarousel: React.FC = () => {
             <div className="container mx-auto px-6 mb-8 md:mb-0">
                 <div className="flex flex-col md:flex-row items-center">
 
-                    {/* Static Text Section (Left side - visible on desktop, stacked on mobile) */}
+                    {/* Static Text Section (Left side) */}
                     <div className="w-full md:w-auto md:pr-12 md:mr-8 border-b md:border-b-0 md:border-r border-gray-300 pb-6 md:pb-0 relative z-20 bg-velluto-light flex-shrink-0 mb-8 md:mb-0">
                         <h3 className="text-2xl md:text-3xl text-foreground font-light leading-tight">
                             I NOSTRI MARCHI
@@ -36,45 +43,27 @@ const BrandCarousel: React.FC = () => {
 
                     {/* Scrolling Logos Section (Right side) */}
                     <div className="flex-1 relative overflow-hidden mask-linear-gradient w-full">
-                        {/* 
-                Use flex-nowrap and let children determine width. 
-                The animation moves translateX from 0 to -50%.
-             */}
                         <div className="flex w-max animate-infinite-scroll hover:pause">
                             {/* First Set */}
-                            <div className="flex flex-nowrap shrink-0 items-center gap-24 px-12">
+                            <div className="flex flex-nowrap shrink-0 items-center gap-12 px-12">
                                 {BRANDS.map((brand, index) => (
-                                    <div key={`brand-1-${index}`} className="flex-shrink-0 group flex items-center justify-center w-[100px] h-[60px]">
+                                    <div key={`brand-1-${index}`} className="flex-shrink-0 group flex items-center justify-center w-[120px] h-[120px] bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                         <img
                                             src={brand.logo}
                                             alt={brand.name}
-                                            className={`
-                        max-h-12 w-auto object-contain transition-all duration-300
-                        ${brand.isSimpleIcon
-                                                    ? 'opacity-60 group-hover:opacity-100 invert'
-                                                    : 'opacity-60 group-hover:opacity-100'
-                                                }
-                        ${(brand as any).isJpg ? 'mix-blend-multiply' : ''}
-                      `}
+                                            className={`max-h-full max-w-full object-contain ${(brand as any).scale || ''}`}
                                         />
                                     </div>
                                 ))}
                             </div>
                             {/* Second Set (Duplicate for loop) */}
-                            <div className="flex flex-nowrap shrink-0 items-center gap-24 px-12">
+                            <div className="flex flex-nowrap shrink-0 items-center gap-12 px-12">
                                 {BRANDS.map((brand, index) => (
-                                    <div key={`brand-2-${index}`} className="flex-shrink-0 group flex items-center justify-center w-[100px] h-[60px]">
+                                    <div key={`brand-2-${index}`} className="flex-shrink-0 group flex items-center justify-center w-[120px] h-[120px] bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                                         <img
                                             src={brand.logo}
                                             alt={brand.name}
-                                            className={`
-                        max-h-12 w-auto object-contain transition-all duration-300
-                        ${brand.isSimpleIcon
-                                                    ? 'opacity-60 group-hover:opacity-100 invert'
-                                                    : 'opacity-60 group-hover:opacity-100'
-                                                }
-                        ${(brand as any).isJpg ? 'mix-blend-multiply' : ''}
-                      `}
+                                            className="max-h-full max-w-full object-contain"
                                         />
                                     </div>
                                 ))}

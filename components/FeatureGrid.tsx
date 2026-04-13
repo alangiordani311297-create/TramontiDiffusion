@@ -16,7 +16,7 @@ const features = [
     },
     {
         id: 3,
-        title: "ULTIME NOVITÀ",
+        title: "NEWS & EVENTI",
         image: "/immagini/ultime_novita_model.jpg",
         href: "/journal"
     }

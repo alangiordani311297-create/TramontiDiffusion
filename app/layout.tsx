@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
-import { Outfit, Great_Vibes } from "next/font/google";
+import { Montserrat, Great_Vibes, Noto_Serif } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const montserrat = Montserrat({
   variable: "--font-outfit",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 const greatVibes = Great_Vibes({
   weight: "400",
   variable: "--font-great-vibes",
   subsets: ["latin"],
+});
+
+const notoSerif = Noto_Serif({
+  variable: "--font-noto-serif",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${outfit.variable} ${greatVibes.variable} antialiased`}
+        className={`${montserrat.variable} ${greatVibes.variable} ${notoSerif.variable} antialiased`}
       >
         {children}
       </body>
