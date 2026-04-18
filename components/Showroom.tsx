@@ -19,7 +19,7 @@ const Showroom: React.FC<ShowroomProps> = ({ onOpenGallery, onOpenQuote }) => {
     }, [activeFilter]);
 
     return (
-        <section id="showroom" className="pb-12 md:pb-24 pt-0 bg-background relative">
+        <section id="showroom" className="pb-12 md:pb-24 pt-16 md:pt-24 bg-background relative">
             <div className="container mx-auto px-4 md:px-6">
                 {/* Section Header */}
                 <div className="mb-16 text-center">

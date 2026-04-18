@@ -1,103 +1,45 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { ArrowDown } from 'lucide-react';
-
 import Link from 'next/link';
 
 const Hero: React.FC = () => {
-    const slides = [
-        {
-            src: "/immagini/chi_sono/foto 1.png",
-            title: "Scopri le auto disponibili",
-            subtitle: "Nel nostro nuovo Showroom",
-            buttonText: "TUTTO LO STOCK",
-            link: "/showroom"
-        },
-        {
-            src: "/immagini/chi_sono/foto 2.jpg",
-            title: "Le migliori auto di lusso",
-            subtitle: "Con soluzioni di acquisto vantaggiose",
-            buttonText: "STOCK DISPONIBILE",
-            link: "/showroom"
-        },
-        {
-            src: "/immagini/chi_sono/foto 3.jpg",
-            title: "Contatta subito un esperto",
-            subtitle: " ",
-            buttonText: "VENDI AUTO",
-            link: "/contatti"
-        },
-        {
-            src: "/immagini/chi_sono/foto 4.jpg",
-            title: "Vuoi vendere con noi?",
-            subtitle: " ",
-            buttonText: "CONTATTACI",
-            link: "/contatti"
-        }
-    ];
-
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        }, 5000); // Cambia immagine ogni 5 secondi
-
-        return () => clearInterval(interval);
-    }, [slides.length]);
-
     return (
-        <section className="relative w-full overflow-hidden bg-black md:h-[100svh]">
-
-            {/* SLIDESHOW IMMAGINI */}
-            {slides.map((slide, index) => (
-                <div
-                    key={index}
-                    className={`w-full transition-opacity duration-1000 ease-in-out z-0 ${
-                        index === currentSlideIndex
-                            ? 'opacity-100 relative md:absolute md:inset-0 md:h-full'
-                            : 'opacity-0 absolute inset-0'
-                    }`}
-                >
-                    {/* Immagine */}
-                    <img 
-                        src={slide.src} 
-                        alt={`Hero Home ${index + 1}`} 
-                        className="w-full h-auto md:h-full md:object-cover object-center"
-                    />
-                </div>
-            ))}
-
-            {/* OVERLAY SCURO PER LE SCRITTE */}
-            <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
-
-            {/* Testi Sovrapposti (transizioni sincronizzate) */}
-            <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
-                {slides.map((slide, index) => (
-                    <div 
-                        key={`text-${index}`}
-                        className={`absolute w-full transition-all duration-1000 ease-in-out flex flex-col items-center ${
-                            index === currentSlideIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-                        }`}
-                    >
-                        <h1 className="text-2xl md:text-6xl font-bold text-white mb-1 md:mb-2 leading-tight">
-                            {slide.title}
-                        </h1>
-                        <h2 className="text-lg md:text-4xl font-light text-white mb-4 md:mb-10">
-                            {slide.subtitle}
-                        </h2>
-                        
-                        <Link href={slide.link} className="inline-block border border-white text-white px-8 py-3 text-sm font-bold tracking-[0.2em] transform hover:bg-white hover:text-black transition-all">
-                            {slide.buttonText}
-                        </Link>
-                    </div>
-                ))}
+        <section className="relative w-full overflow-hidden bg-black h-[100svh]">
+            {/* BACKGROUND IMAGE */}
+            <div className="absolute inset-0 z-0">
+                <img 
+                    src="/immagini/Porsche foto home.jpg" 
+                    alt="Tramonti Diffusion Hero" 
+                    className="w-full h-full object-cover object-center"
+                />
+                {/* GRADIENT OVERLAY for depth and text readability - matching editorial style */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             </div>
 
-            {/* Scroll Indicator */}
+            {/* CONTENT - Raised higher to avoid overlapping the car */}
+            <div className="relative z-20 h-full flex flex-col justify-end pb-36 md:pb-56 lg:pb-64 px-4 md:px-10 lg:px-14">
+                <div className="max-w-3xl">
+                    <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.05] tracking-tight uppercase">
+                        L’arte della qualità,<br />
+                        <span className="text-velluto-gold">firmata Tramonti Diffusion</span>
+                    </h1>
+                    
+                    <div className="flex flex-col md:flex-row gap-4 mt-8">
+                        <Link href="/showroom" className="inline-block border border-white text-white px-10 py-4 text-sm font-bold tracking-[0.2em] transform hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm">
+                            TUTTO LO STOCK
+                        </Link>
+                        <Link href="/#servizi" className="inline-block bg-white text-black px-10 py-4 text-sm font-bold tracking-[0.2em] transform hover:bg-velluto-gold hover:text-black transition-all duration-300">
+                            SCOPRI I SERVIZI
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            {/* Scroll Indicator Down (as requested, keeps the page flow) */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce z-20 cursor-pointer" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
-                <ArrowDown className="w-6 h-6 opacity-70 hover:opacity-100 hover:text-velluto-gold transition-colors" />
+                <ArrowDown className="w-8 h-8 opacity-90 hover:opacity-100 hover:text-velluto-gold transition-colors" />
             </div>
         </section>
     );

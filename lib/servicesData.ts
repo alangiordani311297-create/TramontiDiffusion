@@ -6,8 +6,9 @@ export const SERVICES = [
         slug: "officina-certificata",
         icon: Wrench,
         title: "Officina Certificata",
+        imagePosition: "object-center",
         description: "Tecnici specializzati Ferrari, Lamborghini e Porsche. Utilizziamo solo ricambi originali e diagnostica ufficiale per mantenere le prestazioni della tua supercar al massimo livello.",
-        image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=800&auto=format&fit=crop",
+        image: "/immagini/foto officina certificata.jpg",
         details: {
             headline: "La tua Supercar merita il meglio.",
             content: "La nostra officina è un tempio della meccanica di precisione. Ogni intervento viene eseguito seguendo rigorosamente gli standard della casa madre. Disponiamo di ponti sollevatori a basso profilo per vetture sportive e strumenti di diagnosi ufficiali.",
@@ -24,8 +25,9 @@ export const SERVICES = [
         slug: "detailing-ppf",
         icon: Sparkles,
         title: "Detailing & PPF",
+        imagePosition: "object-center",
         description: "Trattamenti nanotecnologici e applicazione di pellicole protettive (PPF) per preservare la vernice originale. Il nostro servizio di detailing riporta l'auto a condizioni da concorso.",
-        image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=800&auto=format&fit=crop",
+        image: "/immagini/detailing e ppf.jpg",
         details: {
             headline: "Perfezione Estetica Assoluta",
             content: "Il detailing non è solo lavaggio, è un'arte. Utilizziamo prodotti di altissima gamma per correggere difetti della vernice, proteggerla con trattamenti ceramici e applicare pellicole PPF invisibili e autorigeneranti.",
@@ -42,6 +44,7 @@ export const SERVICES = [
         slug: "trasporto-blindato",
         icon: Truck,
         title: "Consegna a Domicilio",
+        imagePosition: "object-center",
         description: "Consegna della vettura ovunque nel mondo tramite i nostri camion chiusi e assicurati. Gestiamo tutte le pratiche doganali per l'export internazionale.",
         image: "/immagini/consegna a domicilio.jpg",
         details: {
@@ -60,8 +63,9 @@ export const SERVICES = [
         slug: "servizi-finanziari",
         icon: CreditCard,
         title: "Servizi di Finanziamento",
+        imagePosition: "object-right",
         description: "Soluzioni di leasing e finanziamento su misura, incluse opzioni con maxi-rata finale e leasing per auto d'epoca. Collaboriamo con i principali istituti di credito private.",
-        image: "/immagini/financial_services.png",
+        image: "/immagini/servizio di finanziamento.png",
         details: {
             headline: "Flessibilità Finanziaria su Misura",
             content: "Offriamo prodotti finanziari strutturati per ottimizzare l'acquisto della tua auto di lusso. Dal leasing operativo al finanziamento classico, studiamo la soluzione fiscale più adatta alle tue esigenze.",
@@ -78,8 +82,9 @@ export const SERVICES = [
         slug: "estensione-garanzia",
         icon: Shield,
         title: "Estensione Garanzia",
+        imagePosition: "object-center",
         description: "Pacchetti di garanzia estesa fino a 24 mesi su tutto l'usato certificato Tramonti Diffusion, per goderti la tua auto senza pensieri.",
-        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop",
+        image: "/immagini/foto estensione di garanzia.jpg",
         details: {
             headline: "Guida Senza Pensieri",
             content: "Le nostre auto sono super controllate, ma per la tua massima tranquillità offriamo estensioni di garanzia complete che coprono parti meccaniche, elettriche ed elettroniche fino a 24 mesi dall'acquisto.",
@@ -96,8 +101,9 @@ export const SERVICES = [
         slug: "vendi-la-tua-auto",
         icon: Gem,
         title: "Vendi la Tua Auto",
+        imagePosition: "object-[center_right] md:object-right",
         description: "Valutiamo la tua auto di lusso e la proponiamo alla nostra clientela esclusiva. Un processo semplice, discreto e vantaggioso per cedere la tua vettura al miglior prezzo.",
-        image: "/immagini/vendi la tua auto.jpg",
+        image: "/immagini/foto vendi la tua auto.jpg",
         details: {
             headline: "Il Modo Più Esclusivo di Vendere",
             content: "Affida la tua auto a Tramonti Diffusion e lascia che siamo noi a trovare l'acquirente giusto. Grazie alla nostra rete di clienti selezionati, garantiamo visibilità immediata e trattative riservate per massimizzare il valore della tua vettura.",

@@ -36,7 +36,7 @@ export default function SellPage() {
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed"
                         >
-                            Il nostro atelier offre un servizio di concierge privato per la vendita della tua vettura di prestigio, garantendo la massima valorizzazione e discrezione assoluta.
+                            Ti aiutiamo a vendere la tua auto nel modo più semplice, veloce e sicuro. Ci occupiamo di tutto noi per farti ottenere la migliore valutazione di mercato senza stress.
                         </motion.p>
                     </div>
                 </section>

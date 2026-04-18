@@ -10,6 +10,13 @@ export interface Car {
     mileage: string;
     engine: string;
     available: boolean;
+    transmission: string;
+    fuelType: string;
+    power: string;
+    description: string;
+    registration: string;
+    emissions: string;
+    condition: 'Nuova' | 'Usata' | 'Km 0';
 }
 
 export interface ChatMessage {

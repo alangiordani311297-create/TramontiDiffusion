@@ -27,7 +27,7 @@ const FinancePage = () => {
                         <img 
                             alt="Luxury Car Finance" 
                             className="w-full h-full object-cover grayscale-[20%] contrast-[1.1]" 
-                            src="/immagini/financial_services.png"
+                            src="/immagini/servizio di finanziamento.png"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-[#fcf9f8] via-[#fcf9f8]/40 to-transparent"></div>
                     </div>

@@ -12,6 +12,8 @@ import FeatureGrid from './FeatureGrid';
 import Showroom from './Showroom';
 import ServicesSection from './ServicesSection';
 import LocationSection from './LocationSection';
+import BackToTop from './BackToTop';
+import HeritageBanner from './HeritageBanner';
 import { Car } from '../types';
 
 export default function HomeClient() {
@@ -34,6 +36,7 @@ export default function HomeClient() {
                 <Hero />
                 <BrandCarousel />
                 <FeatureGrid />
+                <HeritageBanner />
                 <Showroom
                     onOpenGallery={handleOpenGallery}
                     onOpenQuote={handleOpenQuote}
@@ -43,6 +46,7 @@ export default function HomeClient() {
             </main>
 
             <Concierge />
+            <BackToTop />
             <Footer />
 
             {/* Modals are global */}
@@ -50,8 +54,8 @@ export default function HomeClient() {
                 <CarGallery
                     isOpen={!!selectedGalleryCar}
                     onClose={() => setSelectedGalleryCar(null)}
-                    images={[selectedGalleryCar.image, ...selectedGalleryCar.gallery]}
-                    title={`${selectedGalleryCar.make} ${selectedGalleryCar.model}`}
+                    car={selectedGalleryCar}
+                    onOpenQuote={handleOpenQuote}
                 />
             )}
 

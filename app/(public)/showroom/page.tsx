@@ -38,8 +38,8 @@ export default function ShowroomPage() {
                 <CarGallery
                     isOpen={!!selectedGalleryCar}
                     onClose={() => setSelectedGalleryCar(null)}
-                    images={[selectedGalleryCar.image, ...selectedGalleryCar.gallery]}
-                    title={`${selectedGalleryCar.make} ${selectedGalleryCar.model}`}
+                    car={selectedGalleryCar}
+                    onOpenQuote={handleOpenQuote}
                 />
             )}
 

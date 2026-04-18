@@ -15,7 +15,7 @@ export default function FinancePage() {
                 <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img 
-                            src="/immagini/financial_services.png" 
+                            src="/immagini/servizio di finanziamento.png" 
                             alt="Luxury Finance Office" 
                             className="w-full h-full object-cover brightness-[0.3]"
                         />

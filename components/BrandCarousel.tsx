@@ -1,27 +1,26 @@
 import React from 'react';
 
 const BRANDS = [
-    { name: 'Ferrari', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Ferrari-Logo.svg/200px-Ferrari-Logo.svg.png' },
-    { name: 'Lamborghini', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/200px-Lamborghini_Logo.svg.png' },
-    { name: 'Porsche', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Porsche_logo.svg/200px-Porsche_logo.svg.png' },
-    { name: 'Maserati', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Maserati_logo.svg/200px-Maserati_logo.svg.png' },
-    { name: 'Aston Martin', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Aston_Martin_logo.svg/200px-Aston_Martin_logo.svg.png' },
-    { name: 'McLaren', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/66/McLaren_Group_logo.svg/200px-McLaren_Group_logo.svg.png' },
-    { name: 'Mercedes Benz', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Benz_logo.svg/200px-Mercedes-Benz_logo.svg.png' },
-    { name: 'Bugatti', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bugatti_logo.svg/200px-Bugatti_logo.svg.png' },
-    { name: 'Pagani', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Pagani_Automobili_logo.svg/200px-Pagani_Automobili_logo.svg.png' },
-    { name: 'Koenigsegg', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Koenigsegg_logo.svg/200px-Koenigsegg_logo.svg.png' },
-    { name: 'Bentley', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Bentley_logo.svg/200px-Bentley_logo.svg.png' },
-    { name: 'Rolls Royce', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Rolls-Royce_Motor_Cars_logo.svg/200px-Rolls-Royce_Motor_Cars_logo.svg.png' },
+    { name: 'Ferrari', logo: '/immagini/foto ferrari logo.webp' },
+    { name: 'Lamborghini', logo: '/immagini/logo lamborghini.png' },
+    { name: 'Porsche', logo: '/immagini/foto logo porsche.webp' },
+    { name: 'Maserati', logo: '/immagini/foto logo maserati.png', scale: 'scale-150' },
+    { name: 'Aston Martin', logo: '/immagini/aston martin logo.png', scale: 'scale-150' },
+    { name: 'McLaren', logo: '/immagini/mclaren logo.jpg', scale: 'scale-150' },
+    { name: 'Mercedes Benz', logo: '/immagini/mercedes benz logo.jpg' },
+    { name: 'Bugatti', logo: '/immagini/bugatti logo.svg' },
+    { name: 'Pagani', logo: '/immagini/logo pagani.webp', scale: 'scale-150' },
+    { name: 'Bentley', logo: '/immagini/foto logo bentley.jpg' },
+    { name: 'Rolls Royce', logo: '/immagini/rolls royce logo.jpg' },
     { name: 'Audi', logo: '/immagini/logo audi.jpg', scale: 'scale-150' },
-    { name: 'BMW', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/200px-BMW.svg.png' },
-    { name: 'Land Rover', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Land_Rover_logo_2.svg/200px-Land_Rover_logo_2.svg.png' },
-    { name: 'Jaguar', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Jaguar_logo.svg/200px-Jaguar_logo.svg.png' },
-    { name: 'Mini', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mini_logo.svg/200px-Mini_logo.svg.png' },
-    { name: 'Smart', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Smart_logo.svg/200px-Smart_logo.svg.png' },
-    { name: 'VW', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/200px-Volkswagen_logo_2019.svg.png' },
-    { name: 'Abarth', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Abarth_Logo.svg/200px-Abarth_Logo.svg.png' },
-    { name: 'Jeep', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Jeep_logo.svg/200px-Jeep_logo.svg.png' },
+    { name: 'BMW', logo: '/immagini/bmw logo.png' },
+    { name: 'Land Rover', logo: '/immagini/land rover logo.png', scale: 'scale-150' },
+    { name: 'Jaguar', logo: '/immagini/jaguar logo.jpg', scale: 'scale-150' },
+    { name: 'Mini', logo: '/immagini/logo mini.jpg', scale: 'scale-150' },
+    { name: 'Smart', logo: '/immagini/logo smart.png', scale: 'scale-150' },
+    { name: 'VW', logo: '/immagini/vw logo.png' },
+    { name: 'Abarth', logo: '/immagini/aarth logo.png', scale: 'scale-150' },
+    { name: 'Jeep', logo: '/immagini/jeep logo.png' },
 ];
 
 const BrandCarousel: React.FC = () => {
@@ -51,7 +50,8 @@ const BrandCarousel: React.FC = () => {
                                         <img
                                             src={brand.logo}
                                             alt={brand.name}
-                                            className={`max-h-full max-w-full object-contain ${(brand as any).scale || ''}`}
+                                            className={`max-h-full max-w-full object-contain multiply-mix ${(brand as any).scale || ''}`}
+                                            style={{ mixBlendMode: 'multiply' }}
                                         />
                                     </div>
                                 ))}
@@ -63,7 +63,8 @@ const BrandCarousel: React.FC = () => {
                                         <img
                                             src={brand.logo}
                                             alt={brand.name}
-                                            className="max-h-full max-w-full object-contain"
+                                            className={`max-h-full max-w-full object-contain multiply-mix ${(brand as any).scale || ''}`}
+                                            style={{ mixBlendMode: 'multiply' }}
                                         />
                                     </div>
                                 ))}
