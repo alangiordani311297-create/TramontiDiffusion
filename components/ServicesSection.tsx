@@ -69,12 +69,12 @@ const ServicesSection: React.FC = () => {
         target: targetRef,
     });
 
-    // We want to translate such that we go from the start to the end of the scrollRef content
-    // We'll use a larger scroll progress range to make it feel smoother
-    const x = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-80%"]);
+    // We use a very long track (1000vh) and a wide transform to ensure all cards are visible
+    // Mapping the entire scroll progress 0-1 to a 90% shift
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-92%"]);
 
     return (
-        <section id="servizi" ref={targetRef} className="relative h-[600vh] bg-white">
+        <section id="servizi" ref={targetRef} className="relative h-[1000vh] bg-white">
             {/* Sticky Container */}
             <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
                 {/* Header Section */}
@@ -86,7 +86,7 @@ const ServicesSection: React.FC = () => {
                     >
                         <h4 className="text-velluto-gold text-xs font-bold uppercase tracking-[0.4em] mb-4">Servizi Exclusive</h4>
                         <h2 className="text-4xl md:text-6xl text-foreground font-serif leading-tight">
-                            L'ECOSISTEMA <span className="italic text-gray-400">TRAMONTI</span>
+                            SERVIZI SU MISURA <span className="italic text-velluto-gold">A 360°</span>
                         </h2>
                     </motion.div>
                 </div>
@@ -95,7 +95,7 @@ const ServicesSection: React.FC = () => {
                 <div className="flex items-center">
                     <motion.div 
                         ref={scrollRef}
-                        style={{ x }} 
+                        style={{ x, willChange: "transform" }} 
                         className="flex gap-8 px-6 md:px-12 lg:px-24"
                     >
                         {SERVICES.map((service, index) => (

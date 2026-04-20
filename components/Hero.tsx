@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative w-full overflow-hidden bg-black h-[100svh]">
+        <section className="relative w-full overflow-hidden bg-black h-[125vh]">
             {/* BACKGROUND IMAGE */}
             <div className="absolute inset-0 z-0">
                 <img 
@@ -15,15 +15,17 @@ const Hero: React.FC = () => {
                     className="w-full h-full object-cover object-center"
                 />
                 {/* GRADIENT OVERLAY for depth and text readability - matching editorial style */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-black/20"></div> {/* General darkening */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent w-full md:w-2/3"></div> {/* Left side darkness */}
             </div>
 
-            {/* CONTENT - Raised higher to avoid overlapping the car */}
-            <div className="relative z-20 h-full flex flex-col justify-end pb-36 md:pb-56 lg:pb-64 px-4 md:px-10 lg:px-14">
-                <div className="max-w-3xl">
-                    <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.05] tracking-tight uppercase">
+            {/* CONTENT - Centered to ensure visibility on all screens */}
+            <div className="relative z-20 h-full flex flex-col justify-center pt-20 px-4 md:px-10 lg:px-14">
+                <div className="max-w-4xl">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
                         L’arte della qualità,<br />
-                        <span className="text-velluto-gold">firmata Tramonti Diffusion</span>
+                        <span className="text-velluto-gold drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">firmata Tramonti Diffusion</span>
                     </h1>
                     
                     <div className="flex flex-col md:flex-row gap-4 mt-8">

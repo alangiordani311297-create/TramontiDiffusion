@@ -65,7 +65,7 @@ export const SERVICES = [
         title: "Servizi di Finanziamento",
         imagePosition: "object-right",
         description: "Soluzioni di leasing e finanziamento su misura, incluse opzioni con maxi-rata finale e leasing per auto d'epoca. Collaboriamo con i principali istituti di credito private.",
-        image: "/immagini/servizio di finanziamento.png",
+        image: "/immagini/servizi_finanziari_premium.png",
         details: {
             headline: "Flessibilità Finanziaria su Misura",
             content: "Offriamo prodotti finanziari strutturati per ottimizzare l'acquisto della tua auto di lusso. Dal leasing operativo al finanziamento classico, studiamo la soluzione fiscale più adatta alle tue esigenze.",
@@ -84,7 +84,7 @@ export const SERVICES = [
         title: "Estensione Garanzia",
         imagePosition: "object-center",
         description: "Pacchetti di garanzia estesa fino a 24 mesi su tutto l'usato certificato Tramonti Diffusion, per goderti la tua auto senza pensieri.",
-        image: "/immagini/foto estensione di garanzia.jpg",
+        image: "/immagini/estensione_garanzia_premium.png",
         details: {
             headline: "Guida Senza Pensieri",
             content: "Le nostre auto sono super controllate, ma per la tua massima tranquillità offriamo estensioni di garanzia complete che coprono parti meccaniche, elettriche ed elettroniche fino a 24 mesi dall'acquisto.",
@@ -103,7 +103,7 @@ export const SERVICES = [
         title: "Vendi la Tua Auto",
         imagePosition: "object-[center_right] md:object-right",
         description: "Valutiamo la tua auto di lusso e la proponiamo alla nostra clientela esclusiva. Un processo semplice, discreto e vantaggioso per cedere la tua vettura al miglior prezzo.",
-        image: "/immagini/foto vendi la tua auto.jpg",
+        image: "/immagini/vendi la tua auto.jpeg",
         details: {
             headline: "Il Modo Più Esclusivo di Vendere",
             content: "Affida la tua auto a Tramonti Diffusion e lascia che siamo noi a trovare l'acquirente giusto. Grazie alla nostra rete di clienti selezionati, garantiamo visibilità immediata e trattative riservate per massimizzare il valore della tua vettura.",

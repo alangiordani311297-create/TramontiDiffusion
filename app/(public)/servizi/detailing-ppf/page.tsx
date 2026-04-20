@@ -92,11 +92,11 @@ export default function DetailingPage() {
                             />
                         </div>
                         {/* Caption under image - adjusted position */}
-                        <div className="absolute -bottom-6 -left-6 lg:left-0 bg-[#1c1b1b] border-t-4 border-[#e9c176] px-8 py-6 shadow-2xl max-w-md hidden md:block border border-white/5">
-                            <h3 className="text-lg font-bold text-white mb-2">
+                        <div className="absolute -bottom-6 -left-6 lg:left-0 bg-[#1c1b1b] border-t-4 border-[#e9c176] px-8 py-6 shadow-2xl max-w-lg hidden md:block border border-white/5">
+                            <h3 className="text-2xl font-bold text-white mb-4">
                                 La nostra passione e determinazione, <br/> al servizio della vostra auto.
                             </h3>
-                            <p className="text-gray-400 text-xs leading-relaxed font-light">
+                            <p className="text-gray-400 text-base leading-relaxed font-light">
                                 Il detailing non è un semplice lavaggio, ma un’arte fatta di precisione, cura e competenza. Utilizziamo prodotti di altissima qualità per esaltarne la brillantezza e proteggerla nel tempo.
                             </p>
                         </div>

@@ -5,6 +5,7 @@ import DetaiingPage from './DetaiingPage';
 import DeliveryPage from './DeliveryPage';
 import FinancePage from './FinancePage';
 import SellPage from './SellPage';
+import OfficinaCertificataPage from './OfficinaCertificataPage';
 export function generateStaticParams() {
     return SERVICES.map((service) => ({
         slug: service.slug,
@@ -16,6 +17,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
     if (slug === 'detailing-ppf') {
         return <DetaiingPage />;
+    }
+
+    if (slug === 'officina-certificata') {
+        return <OfficinaCertificataPage />;
     }
 
     if (slug === 'trasporto-blindato') {

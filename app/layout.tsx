@@ -21,6 +21,8 @@ const notoSerif = Noto_Serif({
   style: ["normal", "italic"],
 });
 
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+
 export const metadata: Metadata = {
   title: "Tramonti Diffusion - Luxury Cars",
   description: "Esclusività e Passione",
@@ -36,7 +38,9 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${greatVibes.variable} ${notoSerif.variable} antialiased`}
       >
-        {children}
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

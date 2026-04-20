@@ -12,7 +12,7 @@ const features = [
         id: 2,
         title: "SERVIZI",
         image: "/immagini/servizi_cover.png",
-        href: "/#services"
+        href: "/#servizi"
     },
     {
         id: 3,

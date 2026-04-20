@@ -13,7 +13,7 @@ export default function SellPage() {
                 <section className="relative h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img 
-                            src="/immagini/vendi la tua auto.jpg" 
+                            src="/immagini/vendi la tua auto.jpeg" 
                             alt="Luxury Car Detailing" 
                             className="w-full h-full object-cover"
                         />
