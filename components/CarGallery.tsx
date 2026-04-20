@@ -232,7 +232,7 @@ const CarGallery: React.FC<CarGalleryProps> = ({ car, isOpen, onClose, onOpenQuo
 const SpecItem = ({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) => (
     <div className="flex items-center gap-6">
         <div className="w-12 h-12 flex items-center justify-center bg-gray-50 rounded-lg text-gray-400">
-            {React.cloneElement(icon as React.ReactElement, { className: "w-6 h-6" })}
+            {React.cloneElement(icon as React.ReactElement<any>, { className: "w-6 h-6" })}
         </div>
         <div className="flex-1 flex justify-between items-center border-b border-gray-50 pb-2">
             <span className="text-gray-500 font-medium">{label}</span>

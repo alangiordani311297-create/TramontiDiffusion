@@ -2,12 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-    Payments, 
-    VerifiedUser, 
-    Description,
-    Call
-} from '@mui/icons-material'; // I'll use Lucide icons for consistency unless MUI is preferred
 import {
     CircleDollarSign,
     ShieldCheck,
