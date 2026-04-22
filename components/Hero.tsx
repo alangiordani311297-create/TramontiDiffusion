@@ -15,9 +15,9 @@ const Hero: React.FC = () => {
                     className="w-full h-full object-cover object-center"
                 />
                 {/* GRADIENT OVERLAY for depth and text readability - matching editorial style */}
-                <div className="absolute inset-0 bg-black/20"></div> {/* General darkening */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent w-full md:w-2/3"></div> {/* Left side darkness */}
+                <div className="absolute inset-0 bg-black/10"></div> {/* General darkening */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent w-full md:w-2/3"></div> {/* Left side darkness */}
             </div>
 
             {/* CONTENT - Centered to ensure visibility on all screens */}
